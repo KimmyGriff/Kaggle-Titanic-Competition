@@ -2,7 +2,7 @@ setwd("/Users/kimberlybarr/Desktop/titanic")
 titanic.train <- read.csv(file = "train.csv", stringsAsFactors = FALSE, header = TRUE)
 titanic.test <- read.csv(file = "test.csv", stringsAsFactors = FALSE, header = TRUE)
 
-# I want to combine the two data files together, but first i'll add a column to help identify if the information is from the test set or train set
+# I want to combine the two data files together, but first I'll add a column to help identify if the information is from the test set or train set.
 
 titanic.train$IsTrainSet <- TRUE
 titanic.test$IsTrainSet <- FALSE
@@ -16,7 +16,7 @@ ncol(titanic.test)
 names(titanic.test)
 names(titanic.train)
  
-# I need to add a "Survived" column to the titanic.test file
+# I need to add a "Survived" column to the titanic.test file.
 
 titanic.test$Survived <- NA
 
@@ -81,7 +81,7 @@ features.equation <- " Pclass + Sex + Age + SibSp + Parch + Fare + Embarked"
 
 survived <- predict(titanic.model, newdata = titanic.test)
 
-# I want to make a csv with only PassangerID and Survived
+# I want to make a csv with only PassangerID and Survived.
 
 PassangerId <- titanic.test$PassengerId
 
